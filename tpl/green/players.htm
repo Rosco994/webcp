@@ -1,4 +1,3 @@
-
 <span class="showing">Showing top <[limit]> characters</span>
 
 <table id="players">
@@ -9,6 +8,7 @@
 			<th>Gender
 			<th>Level
 			<th>Exp
+			<th>Reborn
 	<tbody>
 <[foreach characters char]>
 		<tr>
@@ -18,9 +18,11 @@
 
 			<td><[char.gender]>
 
-			<td><[char.level]>
+			<td><[char.level]> <!-- Display adjusted level -->
 
-			<td><[char.exp]>
+			<td><[char.exp]> <!-- Display adjusted experience -->
+
+			<td><[char.reborn]> <!-- Display reborn count -->
 
 <[endforeach]>
 </table>

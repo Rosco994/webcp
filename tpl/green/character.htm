@@ -1,118 +1,105 @@
-
 <table id="character">
-	<thead>
-		<tr><th colspan="3"><[character.name]><[if GM]> <a href="./gmaccount<[php]>?name=<[%character.account]>">(<[character.account]>)</a><[endif]>
-	<tbody>
-		<tr><th>Level<td colspan="2"><[character.level]>
+    <thead>
+        <tr>
+            <th colspan="3">
+                <[character.name]>
+                <[if GM]>
+                    <a href="./gmaccount<[php]>?name=<[%character.account]>">(<[character.account]>)</a>
+                <[endif]>
+    <tbody>
+        <!-- Level Row -->
+        <tr><th>Level<td colspan="2"><[character.level]></tr>
 
-		<tr><th>EXP<td colspan="2"><[character.exp]>
+        <!-- Experience Row -->
+        <tr><th>EXP<td colspan="2"><[character.exp]></tr>
 
-		<tr><th>Admin Rank<td colspan="2"><[character.admin_str]>
+        <!-- Rank Row -->
+        <tr><th>Rank<td colspan="2"><[character.rank]></tr>
 
-<[if character.guild]>
-		<tr><th rowspan="3">Guild<th>Tag<td><[character.guild]>
+        <!-- Admin Rank Row -->
+        <tr><th>Admin Rank<td colspan="2"><[character.admin_str]></tr>
 
-		<tr><th>Name<td><a href="./guild<[php]>?tag=<[%character.guild]>"><[character.guild_name]></a>
-		<tr><th>Rank<td><[character.guild_rank_str]> (<[character.guild_rank]>)
-<[else]>
-		<tr><th>Guild<td colspan="2"><i>Not in guild</i>
-<[endif]>
-		<tr><th>Gender<td colspan="2"><[character.gender]>
+        <!-- Guild Information -->
+        <[if character.guild]>
+        <tr><th rowspan="3">Guild<th>Tag<td><[character.guild]></tr>
 
-		<tr><th>Race<td colspan="2"><[character.race_str]>
+        <tr><th>Name<td><a href="./guild<[php]>?tag=<[%character.guild]>"><[character.guild_name]></a></tr>
+        <tr><th>Rank<td><[character.guild_rank_str]> (<[character.guild_rank]>)</tr>
+        <[else]>
+        <tr><th>Guild<td colspan="2"><i>Not in guild</i></tr>
+        <[endif]>
+        
+        <!-- Gender Row -->
+        <tr><th>Gender<td colspan="2"><[character.gender]></tr>
 
-		<tr><th>Class<td colspan="2"><[character.class_str]>
+        <!-- Race Row -->
+        <tr><th>Race<td colspan="2"><[character.race_str]></tr>
 
-		<tr><th>Title<td colspan="2"><[character.title]>
+        <!-- Class Row -->
+        <tr><th>Class<td colspan="2"><[character.class_str]></tr>
 
-		<tr><th>Partner<td colspan="2"><[if GM]><a href="./character<[php]>?name=<[%character.partner]>"><[endif]><[character.partner]><[if GM]></a><[endif]>
+        <!-- Title Row -->
+        <tr><th>Title<td colspan="2"><[character.title]></tr>
 
-		<tr><th rowspan="2">Hair<th>Style<td><[character.hairstyle]>
+        <!-- Partner Row -->
+        <tr>
+            <th>Partner
+            <td colspan="2">
+                <[if GM]><a href="./character<[php]>?name=<[%character.partner]>"><[endif]>
+                <[character.partner]>
+                <[if GM]></a><[endif]>
+            </td>
+        </tr>
 
-		<tr><th>Color<td><[character.haircolor_str]>
+        <!-- Hair Style and Color Rows -->
+        <tr><th rowspan="2">Hair<th>Style<td><[character.hairstyle]></tr>
 
-		<tr><th rowspan="4">Home<th>Name<td><[character.home]>
+        <tr><th>Color<td><[character.haircolor_str]></tr>
 
-		<tr><th>Map<td><[character.spawnmap]>
+        <!-- Home Location Information -->
+        <tr><th rowspan="4">Home<th>Name<td><[character.home]></tr>
 
-		<tr><th>X<td><[character.spawnx]>
+        <tr><th>Map<td><[character.spawnmap]></tr>
 
-		<tr><th>Y<td><[character.spawny]>
+        <tr><th>X<td><[character.spawnx]></tr>
 
-		<tr><th rowspan="3">Location<th>Map<td><[character.map]>
+        <tr><th>Y<td><[character.spawny]></tr>
 
-		<tr><th>X<td><[character.x]>
+        <!-- Current Location Information -->
+        <tr><th rowspan="3">Location<th>Map<td><[character.map]></tr>
 
-		<tr><th>Y<td><[character.y]>
+        <tr><th>X<td><[character.x]></tr>
 
-		<tr><th rowspan="6">Stats<th>STR<td><[character.str]>
+        <tr><th>Y<td><[character.y]></tr>
 
-		<tr><th>INT<td><[character.int]>
+        <!-- Stats Section -->
+        <tr><th rowspan="6">Stats<th>STR<td><[character.str]></tr>
 
-		<tr><th>WIS<td><[character.wis]>
+        <tr><th>INT<td><[character.int]></tr>
 
-		<tr><th>AGI<td><[character.agi]>
+        <tr><th>WIS<td><[character.wis]></tr>
 
-		<tr><th>CON<td><[character.con]>
+        <tr><th>AGI<td><[character.agi]></tr>
 
-		<tr><th>CHA<td><[character.cha]>
+        <tr><th>CON<td><[character.con]></tr>
 
-		<tr><th>Stat Points<td colspan="2"><[character.statpoints]>
+        <tr><th>CHA<td><[character.cha]></tr>
 
-		<tr><th>Skill Points<td colspan="2"><[character.skillpoints]>
+        <!-- Stat Points -->
+        <tr><th>Stat Points<td colspan="2"><[character.statpoints]></tr>
 
-		<tr><th>Karma<td colspan="2"><[character.karma_str]>
+        <!-- Skill Points -->
+        <tr><th>Skill Points<td colspan="2"><[character.skillpoints]></tr>
 
-		<tr><th>Usage<td colspan="2"><[character.usage_str]>
+        <!-- Karma -->
+        <tr><th>Karma<td colspan="2"><[character.karma_str]></tr>
 
-		<tr><th>Bank Slots<td colspan="2"><[character.bankmax]>
+        <!-- Usage -->
+        <tr><th>Usage<td colspan="2"><[character.usage_str]></tr>
 
-		<tr><th>Bank Gold<td colspan="2"><[character.goldbank]>
+        <!-- Bank Information -->
+        <tr><th>Bank Slots<td colspan="2"><[character.bankmax]></tr>
 
-</table>
-
-<table id="character-spells">
-	<thead>
-		<tr><th colspan="2">Spells
-		<tr><th>Spell<th>Skill Level
-	<tbody>
-<[foreach character.spells spell]>
-		<tr><td><[spell.name]><td><[spell.level]>
-
-<[endforeach]>
-</table>
-
-<table id="character-paperdoll">
-	<thead>
-		<tr><th colspan="2">Paperdoll
-		<tr><th>Slot<th>Item
-	<tbody>
-<[foreach character.paperdoll item]>
-<[if item.id]>
-		<tr><td><[item.slot]><td><[item.name]>
-
-<[endif]>
-<[endforeach]>
-</table>
-
-<table id="character-inventory">
-	<thead>
-		<tr><th colspan="2">Inventory
-		<tr><th>Item<th>Amount
-	<tbody>
-<[foreach character.inventory item]>
-		<tr><td><[item.name]><td><[item.amount]>
-
-<[endforeach]>
-</table>
-
-<table id="character-bank">
-	<thead>
-		<tr><th colspan="2">Bank
-		<tr><th>Item<th>Amount
-	<tbody>
-<[foreach character.bank item]>
-		<tr><td><[item.name]><td><[item.amount]>
-
-<[endforeach]>
+        <tr><th>Bank Gold<td colspan="2"><[character.goldbank]></tr>
+    </tbody>
 </table>
